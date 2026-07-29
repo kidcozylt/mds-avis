@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import { StarIcon, UserCircleIcon } from '@heroicons/react/20/solid';
 import { PencilIcon, TrashIcon, XMarkIcon, CheckIcon } from '@heroicons/react/24/outline';
+import { API_URL } from '@/service/api';
 
 // --- Composants utilitaires ---
 
@@ -66,7 +67,7 @@ export default function MesAvis() {
     const [deletingId, setDeletingId] = useState(null);
     const [actionError, setActionError] = useState(null);
 
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+    const apiUrl = API_URL;
 
     const getToken = () => {
         if (typeof document === 'undefined') return null;

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import StarIcon from '@heroicons/react/20/solid/StarIcon';
+import { API_URL } from '@/service/api';
 
 function getCookie(name) {
     const match = document.cookie.match(new RegExp(`(^| )${name}=([^;]+)`));
@@ -38,7 +39,7 @@ export default function NouvelAvisPage() {
                 headers.Authorization = `Bearer ${token}`;
             }
 
-            const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000';
+            const apiUrl = API_URL;
 
             const response = await fetch(`${apiUrl}/add/avis`, {
                 method: 'POST',
