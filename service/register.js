@@ -1,6 +1,8 @@
+import { API_URL } from './api' 
+
 const Register = async (data) => {
     try {
-        const response = await fetch("http://localhost:5000/register", {
+        const response = await fetch(`${API_URL}/register`, {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -15,4 +17,4 @@ const Register = async (data) => {
     }
 }
 
-module.exports = Register
+export default Register
