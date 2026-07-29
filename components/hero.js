@@ -1,3 +1,4 @@
+import Link from 'next/link'
 export default function Hero() {
   return (
     <div className="bg-white">
@@ -18,10 +19,10 @@ export default function Hero() {
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-sm/6 text-slate-600 ring-1 ring-slate-200 hover:ring-slate-300">
               Plus de 15 000 avis vérifiés déposés par des étudiants.{' '}
-              <a href="/avis" className="font-semibold text-teal-700">
+              <Link href="/avis" className="font-semibold text-teal-700">
                 <span aria-hidden="true" className="absolute inset-0" />
                 Voir les avis <span aria-hidden="true">&rarr;</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="text-center">
@@ -33,15 +34,15 @@ export default function Hero() {
               d'ingénieurs, les universités et les formations pro. Compare, lis, décide en confiance.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <a
+              <Link
                 href="#"
                 className="rounded-md bg-teal-700 px-3.5 py-2.5 text-sm font-semibold text-white shadow-xs hover:bg-teal-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-700"
               >
                 Trouver une école
-              </a>
-              <a href="/avis/nouveau" className="text-sm/6 font-semibold text-slate-700 hover:text-slate-900">
+              </Link>
+              <Link href="/avis/nouveau" className="text-sm/6 font-semibold text-slate-700 hover:text-slate-900">
                 Déposer un avis <span aria-hidden="true">→</span>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Link from 'next/link'
 import Register from '@/service/register';
 
 export default function RegisterPages() {
@@ -162,9 +163,9 @@ export default function RegisterPages() {
 
         <p className="mt-10 text-center text-sm/6 text-gray-400">
           Already have an account?{" "}
-          <a href="/login" className="font-semibold text-indigo-400 hover:text-indigo-300">
+          <Link href="/login" className="font-semibold text-indigo-400 hover:text-indigo-300">
             Sign in
-          </a>
+          </Link>
         </p>
       </div>
     </div>

@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { StarIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link';
+import { API_URL } from '@/service/api'
 
 export default function ForgotPasswordPage() {
     const [email, setEmail] = useState('');
@@ -45,14 +47,14 @@ export default function ForgotPasswordPage() {
     return (
         <div className="flex min-h-full flex-col justify-center bg-white px-6 py-12 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-                <a href="/" className="mx-auto flex w-fit items-center gap-2">
+                <Link href="/" className="mx-auto flex w-fit items-center gap-2">
                     <span className="flex size-10 items-center justify-center rounded-lg bg-teal-700">
                         <StarIcon aria-hidden="true" className="size-5 text-amber-400" />
                     </span>
                     <span className="text-lg font-bold tracking-tight text-slate-900">
                         MDS<span className="text-teal-700">Avis</span>
                     </span>
-                </a>
+                </Link>
                 <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-slate-900">
                     Mot de passe oublié ?
                 </h2>
@@ -106,9 +108,9 @@ export default function ForgotPasswordPage() {
 
                 <p className="mt-10 text-center text-sm/6 text-slate-500">
                     Tu te souviens de ton mot de passe ?{' '}
-                    <a href="/login" className="font-semibold text-teal-700 hover:text-teal-600">
+                    <Link href="/login" className="font-semibold text-teal-700 hover:text-teal-600">
                         Connecte-toi
-                    </a>
+                    </Link>
                 </p>
             </div>
         </div>

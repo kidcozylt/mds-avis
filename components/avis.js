@@ -1,6 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { StarIcon, UserCircleIcon } from '@heroicons/react/20/solid';
+import { API_URL } from '@/service/api'
+import Link from 'next/link';
 
 function StarRating({ rating }) {
     return (
@@ -68,12 +70,12 @@ export default function Avis() {
                         Des avis vérifiés, laissés par des étudiants et anciens élèves, pour t&apos;aider à choisir
                         ton école en toute confiance.
                     </p>
-                    <a
+                    <Link
                         href="/avis/nouveau"
                         className="mt-8 inline-flex rounded-md bg-teal-700 px-3.5 py-2 text-sm font-semibold text-white hover:bg-teal-800"
                     >
                         Laisser un avis
-                    </a>
+                    </Link>
                 </div>
 
                 {loading && (

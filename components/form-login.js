@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Login from '@/service/login';
 import { StarIcon } from '@heroicons/react/20/solid';
+import Link from 'next/link'
 
 export default function LoginPages() {
     const [email, setEmail] = useState('');
@@ -45,14 +46,14 @@ export default function LoginPages() {
   return (
     <div className="flex min-h-full flex-col justify-center bg-white px-6 py-12 lg:px-8">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-        <a href="/" className="mx-auto flex w-fit items-center gap-2">
+        <Link href="/" className="mx-auto flex w-fit items-center gap-2">
           <span className="flex size-10 items-center justify-center rounded-lg bg-teal-700">
             <StarIcon aria-hidden="true" className="size-5 text-amber-400" />
           </span>
           <span className="text-lg font-bold tracking-tight text-slate-900">
             MDS<span className="text-teal-700">Avis</span>
           </span>
-        </a>
+        </Link>
         <h2 className="mt-10 text-center text-2xl/9 font-bold tracking-tight text-slate-900">
           Connecte-toi à ton compte
         </h2>
@@ -90,9 +91,9 @@ export default function LoginPages() {
                 Mot de passe
               </label>
               <div className="text-sm">
-                <a href="/password-forgot" className="font-semibold text-teal-700 hover:text-teal-600">
+                <Link href="/password-forgot" className="font-semibold text-teal-700 hover:text-teal-600">
                   Mot de passe oublié ?
-                </a>
+                </Link>
               </div>
             </div>
             <div className="mt-2">
@@ -121,9 +122,9 @@ export default function LoginPages() {
 
         <p className="mt-10 text-center text-sm/6 text-slate-500">
           Pas encore de compte ?{' '}
-          <a href="/register" className="font-semibold text-teal-700 hover:text-teal-600">
+          <Link href="/register" className="font-semibold text-teal-700 hover:text-teal-600">
             Crée un compte gratuitement
-          </a>
+          </Link>
         </p>
       </div>
     </div>
